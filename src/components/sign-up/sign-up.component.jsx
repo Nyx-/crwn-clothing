@@ -4,13 +4,11 @@ import { connect } from "react-redux";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
 
-import { auth, createUserPofileDocument } from "../../firebase/firebase.utils";
-
 import './sign-up.styles.scss';
 import {signUpStart} from "../../redux/user/user.actions";
 
 const SignUp = ({ signUpStart }) => {
-    const [userCredentials, setUserCredentials] = userState({
+    const [userCredentials, setUserCredentials] = useState({
         displayName: '',
         email: '',
         password: '',
